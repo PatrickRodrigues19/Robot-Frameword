@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-09-06T15:37:25.383780" rpa="false" schemaversion="5">
+<suite id="s1" name="Preenchimento Correto" source="c:\Users\tickr\Downloads\curso-robot\preenchimento_correto.robot">
+<test id="s1-t1" name="Verificar se preencher os campos do formulário corretamente os dados são inseridos na lista e se um novo card é criado no time esperado" line="23">
+<kw name="Dado que eu acesse o Organo" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-06T15:37:26.609672" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>url=http://localhost:3000/</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-06T15:37:26.605437" elapsed="3.983847"/>
+</kw>
+<status status="PASS" start="2024-09-06T15:37:26.605437" elapsed="3.983847"/>
+</kw>
+<kw name="Dado que preencha os campos do formulário">
+<kw name="FakerLibrary.First Name">
+<msg time="2024-09-06T15:37:30.670096" level="FAIL">No keyword with name 'FakerLibrary.First Name' found.</msg>
+<var>${Nome}</var>
+<status status="FAIL" start="2024-09-06T15:37:30.670096" elapsed="0.003947">No keyword with name 'FakerLibrary.First Name' found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${CAMPO_NOME}</arg>
+<arg>${Nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-06T15:37:30.674043" elapsed="0.000000"/>
+</kw>
+<kw name="FakerLibrary.Job">
+<var>${Cargo}</var>
+<status status="NOT RUN" start="2024-09-06T15:37:30.674043" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${CAMPO_CARGO}</arg>
+<arg>${Cargo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-06T15:37:30.674043" elapsed="0.000000"/>
+</kw>
+<kw name="FakerLibrary.Image Url">
+<var>${Imagem}</var>
+<status status="NOT RUN" start="2024-09-06T15:37:30.674043" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${CAMPO_IMAGEM}</arg>
+<arg>${Imagem}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-06T15:37:30.678364" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${CAMPO_TIME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-06T15:37:30.678364" elapsed="0.000998"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${PROGRAMACAO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-06T15:37:30.692710" elapsed="0.000999"/>
+</kw>
+<status status="FAIL" start="2024-09-06T15:37:30.655391" elapsed="0.038423">No keyword with name 'FakerLibrary.First Name' found.</status>
+</kw>
+<kw name="E clique no botão criar card">
+<status status="NOT RUN" start="2024-09-06T15:37:30.768232" elapsed="0.000000"/>
+</kw>
+<kw name="Então identificar o card dentro do time esperado">
+<status status="NOT RUN" start="2024-09-06T15:37:30.859367" elapsed="0.000999"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-06T15:37:30.904122" elapsed="2.734848"/>
+</kw>
+<status status="PASS" start="2024-09-06T15:37:30.900750" elapsed="2.739369"/>
+</kw>
+<status status="FAIL" start="2024-09-06T15:37:26.598805" elapsed="7.043485">No keyword with name 'FakerLibrary.First Name' found.</status>
+</test>
+<status status="FAIL" start="2024-09-06T15:37:25.398858" elapsed="8.261136"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Preenchimento Correto">Preenchimento Correto</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-09-06T15:37:26.576701" level="ERROR">Error in file 'c:\Users\tickr\Downloads\curso-robot\preenchimento_correto.robot' on line 3: Getting keyword names from library 'FakerLibrary' failed: Initializing library 'FakerLibrary' with arguments [ Locale=pt-BR ] failed: AttributeError: Invalid configuration for faker locale `Locale=pt_BR`
+Traceback (most recent call last):
+  File "C:\Users\tickr\AppData\Local\Programs\Python\Python312\Lib\site-packages\FakerLibrary\keywords.py", line 42, in __init__
+    self._fake = faker.factory.Factory.create(locale, providers)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tickr\AppData\Local\Programs\Python\Python312\Lib\site-packages\faker\factory.py", line 43, in create
+    raise AttributeError(msg)
+AttributeError: Invalid configuration for faker locale `Locale=pt_BR`</msg>
+</errors>
+</robot>
